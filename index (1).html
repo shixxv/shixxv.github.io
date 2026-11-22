@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shivendra Kumar | Full-Stack Developer & Security Enthusiast</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#f7f8fb;--surface:#fff;--text:#14182a;--muted:#5a6078;--accent:#4f46e5;--accent2:#0ea5a4;--border:#e3e6ef;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1020;--surface:#161a30;--text:#eceefa;--muted:#9aa1bf;--accent:#8b8cff;--accent2:#2dd4bf;--border:#262b4a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0d1020;--surface:#161a30;--text:#eceefa;--muted:#9aa1bf;--accent:#8b8cff;--accent2:#2dd4bf;--border:#262b4a;color-scheme:dark}
+html{scroll-padding-top:70px;scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:56px}
+.logo{font-weight:800;color:var(--accent)}
+nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0;font-size:.9rem;color:var(--muted);overflow-x:auto}
+nav a:hover{color:var(--accent)}
+.hero{padding:80px 0 60px}
+.tag{display:inline-block;font-size:.8rem;padding:4px 12px;border-radius:99px;border:1px solid var(--border);background:var(--surface);color:var(--accent2);font-weight:600}
+h1{font-size:clamp(2.2rem,6vw,3.8rem);line-height:1.1;margin:18px 0 12px}
+h1 span{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{max-width:640px;color:var(--muted);font-size:1.08rem}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{padding:11px 22px;border-radius:10px;font-weight:600;border:1px solid var(--border);background:var(--surface)}
+.btn.p{background:var(--accent);color:#fff;border-color:var(--accent)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin-top:40px}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px}
+.stat b{display:block;font-size:1.5rem;color:var(--accent)}
+.stat small{color:var(--muted)}
+section{padding:56px 0}
+h2{font-size:1.7rem;margin:0 0 24px}
+h2::after{content:"";display:block;width:48px;height:4px;border-radius:2px;margin-top:8px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:22px}
+.card h3{margin:0 0 8px;font-size:1.1rem}
+.card p{margin:0;color:var(--muted);font-size:.95rem}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{font-size:.78rem;padding:3px 10px;border-radius:99px;background:color-mix(in srgb,var(--accent) 12%,transparent);color:var(--accent);font-weight:600}
+.skill h3{font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;color:var(--accent2);margin:0 0 10px}
+.tl{border-left:2px solid var(--border);padding-left:22px;display:grid;gap:22px}
+.tl .item{position:relative}
+.tl .item::before{content:"";position:absolute;left:-29px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+.tl small{color:var(--muted)}
+.tl h3{margin:2px 0 4px;font-size:1.05rem}
+.tl p{margin:0;color:var(--muted);font-size:.95rem}
+ul.plain{margin:0;padding-left:18px;color:var(--muted)}
+ul.plain li{margin-bottom:6px}
+.contact{text-align:center}
+.contact h2::after{margin-left:auto;margin-right:auto}
+footer{padding:24px 0;text-align:center;color:var(--muted);font-size:.85rem;border-top:1px solid var(--border)}
+.hero{position:relative;overflow:hidden}
+#hero3d{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.hero .wrap{position:relative;z-index:1}
+.card,.stat{transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translateY(var(--ty,0px));transition:transform .18s ease-out,opacity .7s ease,box-shadow .2s;will-change:transform}
+.card:hover,.stat:hover{box-shadow:0 14px 34px color-mix(in srgb,var(--accent) 22%,transparent)}
+.js .card,.js .stat{opacity:0;--ty:36px}
+.js .card.in,.js .stat.in{opacity:1;--ty:0px}
+@media (prefers-reduced-motion:reduce){.js .card,.js .stat{opacity:1;--ty:0px}.card,.stat{transition:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="logo" href="#top">SK.</a>
+<ul><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li><li><a href="#experience">Experience</a></li><li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li></ul></div></nav>
+
+<header class="hero" id="top"><canvas id="hero3d" aria-hidden="true"></canvas><div class="wrap">
+<span class="tag">Open to internships &amp; opportunities</span>
+<h1>Hi, I’m <span>Shivendra Kumar</span></h1>
+<p class="lead">B.Tech CSE student building full-stack web apps with a security-first mindset. MERN, Java, and secure coding are my playground.</p>
+<div class="btns"><a class="btn p" href="#projects">View Projects</a><a class="btn" href="mailto:thakurshivendra817@gmail.com">Email Me</a></div>
+<div class="stats">
+<div class="stat"><b>8.02</b><small>B.Tech CGPA</small></div>
+<div class="stat"><b>4</b><small>Projects built</small></div>
+<div class="stat"><b>6</b><small>Certifications</small></div>
+<div class="stat"><b>2027</b><small>Graduating</small></div>
+</div></div></header>
+
+<section id="about"><div class="wrap"><h2>About</h2>
+<div class="card"><p>I’m a Computer Science undergraduate at LNCT University, Bhopal, with a strong foundation in DSA, OOP, and DBMS. I build full-stack applications using React, Node.js, Spring Boot, and MySQL/MongoDB, and I focus on cybersecurity and secure coding: OWASP Top 10, secure authentication, and vulnerability assessment. I’m also certified in AI/Deep Learning and Generative AI, and I enjoy mentoring juniors and organizing tech events.</p></div></div></section>
+
+<section id="skills"><div class="wrap"><h2>Skills</h2>
+<div class="grid">
+<div class="card skill"><h3>Languages &amp; Concepts</h3><div class="chips"><span class="chip">Java</span><span class="chip">OOP</span><span class="chip">DSA</span></div></div>
+<div class="card skill"><h3>Web</h3><div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">React.js</span><span class="chip">Node.js</span><span class="chip">Express.js</span><span class="chip">Tailwind CSS</span></div></div>
+<div class="card skill"><h3>Databases</h3><div class="chips"><span class="chip">SQL</span><span class="chip">DBMS</span><span class="chip">MongoDB</span></div></div>
+<div class="card skill"><h3>Cybersecurity</h3><div class="chips"><span class="chip">OWASP Top 10</span><span class="chip">XSS / CSRF</span><span class="chip">SQL/NoSQL Injection</span><span class="chip">JWT</span><span class="chip">bcrypt</span><span class="chip">RBAC</span><span class="chip">Input Validation</span><span class="chip">Cryptography Basics</span><span class="chip">TLS/HTTPS</span><span class="chip">TCP/IP · HTTP · DNS</span></div></div>
+<div class="card skill"><h3>Security Tools</h3><div class="chips"><span class="chip">Burp Suite</span><span class="chip">Wireshark</span><span class="chip">Nmap</span><span class="chip">Kali Linux</span></div></div>
+<div class="card skill"><h3>Other</h3><div class="chips"><span class="chip">Operating Systems</span><span class="chip">REST APIs</span><span class="chip">Git/GitHub</span><span class="chip">Linux CLI</span></div></div>
+</div></div></section>
+
+<section id="projects"><div class="wrap"><h2>Projects</h2>
+<div class="grid">
+<div class="card"><h3>Job Portal App</h3><p>Full-stack job portal where job seekers browse listings and apply, and employers manage applications.</p><div class="chips"><span class="chip">MongoDB</span><span class="chip">Express.js</span><span class="chip">React.js</span><span class="chip">Node.js</span></div></div>
+<div class="card"><h3>PrepBuddy</h3><p>Competitive exam and interview preparation platform with structured assessments, performance ratings, and study plans to improve targeted skills.</p><div class="chips"><span class="chip">Assessments</span><span class="chip">Study Plans</span></div></div>
+<div class="card"><h3>Splitwise Clone</h3><p>Group expense-management app that simplifies bill splitting and expense tracking with an intuitive UI for groups and friends.</p><div class="chips"><span class="chip">React</span><span class="chip">Tailwind CSS</span></div></div>
+<div class="card"><h3>AWS AI Stack</h3><p>Cloud-native AI application stack on AWS that exposes generative AI capabilities through a secure serverless API, with storage for user data and least-privilege access controls.</p><div class="chips"><span class="chip">AWS</span><span class="chip">Amazon Bedrock</span><span class="chip">Lambda</span><span class="chip">API Gateway</span><span class="chip">S3</span><span class="chip">IAM</span></div></div>
+</div></div></section>
+
+<section id="experience"><div class="wrap"><h2>Experience</h2>
+<div class="tl"><div class="item"><small>May 2026 – Jun 2026 · Remote</small><h3>Support Back End Engineer (Intern), InterviewSync.Pro.in</h3>
+<p>Supported backend engineering functions, aligning with company coding standards and platform requirements, and brought consistency and a proactive approach to problem-solving.</p></div></div></div></section>
+
+<section id="education"><div class="wrap"><h2>Education &amp; Certifications</h2>
+<div class="grid">
+<div class="card"><h3>Education</h3>
+<div class="tl" style="gap:16px">
+<div class="item"><small>2023 – 2027</small><h3>B.Tech CSE, LNCT University</h3><p>CGPA 8.02</p></div>
+<div class="item"><small>2020 – 2023</small><h3>BCA, APJ Abdul Kalam University</h3><p>CGPA 7</p></div>
+<div class="item"><small>2020</small><h3>Class XII, Shivam Convent School</h3><p>80%</p></div>
+<div class="item"><small>2018</small><h3>Class X, Gyan Niketan School</h3><p>95% · CGPA 10</p></div>
+</div></div>
+<div class="card"><h3>Certifications</h3><ul class="plain">
+<li>Deep Learning / NLP / AI: Excelr (FutureSkills Prime)</li>
+<li>Microsoft Generative AI: Microsoft Learn</li>
+<li>Command Line Basics in Linux: Coursera</li>
+<li>Java for Beginners: Loops &amp; Arrays: Coursera</li>
+<li>COVID-19 Data Analysis Using Python: Coursera</li>
+<li>Introduction to Project Management: Coursera</li></ul></div>
+<div class="card"><h3>Achievements</h3><ul class="plain">
+<li>Coordinated technical events and coding workshops</li>
+<li>Mentored juniors in programming and DSA</li>
+<li>Built full-stack apps with React, Spring Boot, Node.js, and MySQL</li>
+<li>Implemented REST APIs, authentication, and database integration</li>
+<li>Led curricular events, fest stalls, and Olympiad participation</li></ul></div>
+</div></div></section>
+
+<section id="contact" class="contact"><div class="wrap"><h2>Let’s Connect</h2>
+<p class="lead" style="margin:0 auto 22px">Looking for internships and entry-level roles in full-stack development or security. Let’s talk.</p>
+<div class="btns" style="justify-content:center"><a class="btn p" href="mailto:thakurshivendra817@gmail.com">thakurshivendra817@gmail.com</a><a class="btn" href="tel:+917070775197">+91-7070775197</a></div>
+<p style="color:var(--muted);margin-top:18px">Bhopal, Madhya Pradesh, India</p></div></section>
+
+<footer>© 2026 Shivendra Kumar</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.documentElement.classList.add('js');
+var els=document.querySelectorAll('.card,.stat');
+if('IntersectionObserver' in window){
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+ els.forEach(function(el,i){el.style.transitionDelay=(i%3)*80+'ms';io.observe(el)});
+}else{els.forEach(function(el){el.classList.add('in')})}
+if(!reduce){
+ els.forEach(function(el){
+  el.addEventListener('pointermove',function(e){if(e.pointerType==='touch')return;var b=el.getBoundingClientRect();var x=(e.clientX-b.left)/b.width-.5,y=(e.clientY-b.top)/b.height-.5;el.style.setProperty('--ry',(x*10)+'deg');el.style.setProperty('--rx',(-y*10)+'deg')});
+  el.addEventListener('pointerleave',function(){el.style.setProperty('--rx','0deg');el.style.setProperty('--ry','0deg')});
+ });
+}
+try{
+ var host=document.getElementById('top'),cv=document.getElementById('hero3d');
+ var r=new THREE.WebGLRenderer({canvas:cv,alpha:true,antialias:true});
+ r.setPixelRatio(Math.min(window.devicePixelRatio||1,2));
+ var scene=new THREE.Scene(),cam=new THREE.PerspectiveCamera(45,1,.1,100);cam.position.z=7;
+ var g=new THREE.Group();scene.add(g);
+ var m1=new THREE.MeshBasicMaterial({wireframe:true,transparent:true,opacity:.55});
+ var m2=new THREE.MeshBasicMaterial({wireframe:true,transparent:true,opacity:.4});
+ var ico=new THREE.Mesh(new THREE.IcosahedronGeometry(1.9,1),m1);
+ var knot=new THREE.Mesh(new THREE.TorusKnotGeometry(.8,.25,100,12),m2);
+ g.add(ico);g.add(knot);
+ var n=260,pos=new Float32Array(n*3);
+ for(var i=0;i<n;i++){var rad=3+Math.random()*4.5,th=Math.random()*6.2832,ph=Math.acos(2*Math.random()-1);pos[i*3]=rad*Math.sin(ph)*Math.cos(th);pos[i*3+1]=rad*Math.sin(ph)*Math.sin(th);pos[i*3+2]=rad*Math.cos(ph)}
+ var geo=new THREE.BufferGeometry();geo.setAttribute('position',new THREE.BufferAttribute(pos,3));
+ var pm=new THREE.PointsMaterial({size:.05,transparent:true,opacity:.8});
+ var pts=new THREE.Points(geo,pm);scene.add(pts);
+ function colors(){var cs=getComputedStyle(document.documentElement);m1.color.set(cs.getPropertyValue('--accent').trim());m2.color.set(cs.getPropertyValue('--accent2').trim());pm.color.set(cs.getPropertyValue('--accent2').trim())}
+ colors();
+ matchMedia('(prefers-color-scheme: dark)').addEventListener('change',function(){setTimeout(colors,50)});
+ function size(){var w=host.clientWidth,h=host.clientHeight,wide=w>760;r.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();g.position.x=wide?2.7:0;g.scale.setScalar(wide?1:.8);m1.opacity=wide?.55:.28;m2.opacity=wide?.4:.22}
+ size();
+ if('ResizeObserver' in window)new ResizeObserver(size).observe(host);else addEventListener('resize',size);
+ var mx=0,my=0,vis=true,t=0;
+ addEventListener('pointermove',function(e){mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5});
+ if('IntersectionObserver' in window)new IntersectionObserver(function(es){vis=es[0].isIntersecting}).observe(host);
+ function frame(){
+  requestAnimationFrame(frame);if(!vis)return;
+  t+=.016;
+  ico.rotation.x+=.002;ico.rotation.y+=.004;
+  knot.rotation.x-=.01;knot.rotation.y+=.008;
+  pts.rotation.y+=.0007;
+  g.position.y=Math.sin(t)*.15;
+  g.rotation.z=(window.scrollY||0)*.0008;
+  cam.position.x+=(mx*.8-cam.position.x)*.05;cam.position.y+=(-my*.5-cam.position.y)*.05;cam.lookAt(0,0,0);
+  r.render(scene,cam);
+ }
+ if(reduce){r.render(scene,cam)}else{frame()}
+}catch(e){console.warn('3D unavailable',e)}
+})();
+</script>
+</body>
+</html>
